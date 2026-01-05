@@ -39,10 +39,16 @@ vercel-mcp/
 
 - **链接扩展**：
 
-    在项目根目录下运行以下命令，将扩展链接到Gemini CLI：
+  - 在项目根目录下运行以下命令，将扩展链接到Gemini CLI：
 
     ```bash
     gemini extensions link .
+    ```
+
+  - 或者通过以下命令安装：
+
+    ```bash
+    gemini extensions install https://github.com/ZhanZiyuan/vercel-mcp
     ```
 
 - **重启Gemini CLI**：
@@ -61,12 +67,16 @@ vercel-mcp/
 {
   "name": "vercel-mcp",
   "version": "1.0.0",
-  "description": "Vercel integration via MCP",
+  "description": "A Gemini CLI extension for Vercel's official MCP server.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
     "vercel": {
       "command": "npx",
-      "args": ["-y", "mcp-remote", "[https://mcp.vercel.com](https://mcp.vercel.com)"]
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.vercel.com"
+      ]
     }
   }
 }
