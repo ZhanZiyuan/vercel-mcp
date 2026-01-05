@@ -40,11 +40,17 @@ vercel-mcp/
 
 - **Link the Extension**:
 
-Navigate to the project root and link it to Gemini CLI:
+  - Navigate to the project root and link it to Gemini CLI:
 
-```bash
-gemini extensions link .
-```
+    ```bash
+    gemini extensions link .
+    ```
+
+  - Or install the extension using the following command:
+
+    ```bash
+    gemini extensions install https://github.com/ZhanZiyuan/vercel-mcp
+    ```
 
 - **Restart Gemini CLI**:
 
@@ -63,12 +69,16 @@ It uses `npx` to run the remote MCP server directly, so no local build is requir
 {
   "name": "vercel-mcp",
   "version": "1.0.0",
-  "description": "Vercel integration via MCP",
+  "description": "A Gemini CLI extension for Vercel's official MCP server.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
     "vercel": {
       "command": "npx",
-      "args": ["-y", "mcp-remote", "[https://mcp.vercel.com](https://mcp.vercel.com)"]
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.vercel.com"
+      ]
     }
   }
 }
